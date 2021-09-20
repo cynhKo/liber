@@ -1,0 +1,497 @@
+/*reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,li{list-style: none;}
+
+img{
+    border: 0;
+}
+
+
+
+
+/*모달창*/
+
+#modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+/*    겹치려면 포지션 기억할 것 */
+    position: fixed;
+/*    fixed쓰면 값이 없더라도 고정하기 위해 top left 써주기*/
+    top: 0;
+    left: 0;
+/*    순서를 맞추기 위해 z-index: 사용 (index=들여쓰기)*/
+/*    z-index를 쓴 게 있으면 뒤에 9를 더 붙여서 앞으로 하기*/
+    z-index: 99999;
+}
+
+#modal img{
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+#modal .popup{
+    width: 340px;
+    height: 300px;
+    background-color: #ffff;
+/*    위치넣기 position: fixed*/
+    position: fixed;
+    top: 35%;
+    left: 50%;
+/*    border-radius: 20%;*/
+
+/*    몸통만큼 너가 계산해서 반만가! 움직이게하는 것 */
+/*    양수 오른쪽 음수 왼쪽*/
+    transform: translateX(-50%)
+}
+
+#modal h5{
+    font-size: 17px;
+/*    text-align: center;*/
+    margin-left: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    color: cornflowerblue;
+}
+
+#modal p{
+/*    text-align: center;*/
+    margin-left: 40px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+#modal .close{
+    width: 25px;
+    height: 25px;
+    line-height: 10px;
+    font-size: 25px;
+    color: black;
+    position: absolute;
+    right: 5px;
+    bottom: 270px;
+/*
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+*/
+    background-color: azure;
+/*    border: 1px solid black;*/
+    cursor: pointer;
+
+}
+
+
+
+/*layout start*/
+
+#box{
+    width: 100%;
+    height: 3240px;
+/*    border: 2px solid blue;*/
+}
+
+.container{
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+}
+
+#box header .logo{
+    width: 20px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+}
+
+.imgbox img { 
+    float: right;
+    margin-left: 10px;
+    float: right;
+    margin-top: 20px;
+    
+}
+
+.imgbox img:hover{
+    opacity: .6;
+}
+
+.imgbox img:first-child{
+    margin-right: 20px;
+}
+
+nav{
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+    height: 20px;
+/*
+    포지션 앱솔루트 써도 되는데 그러면 화면기준으로 따라가기 때문
+    relative를 써줄 것, 그리고 z-index는 포지션이 있어야 사용가능
+*/
+    position: relative;
+    z-index: 9999;
+  
+    
+}
+
+
+
+nav .gnb{
+        color: black;
+        font-weight: 300;
+      
+}
+
+nav .gnb li{
+    float: left;
+    margin: 0 auto;
+    width: 25%;
+    height:30px;
+    text-align: center;
+    font-family:sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 30px;
+/*    border-radius: 130px;*/
+/*    background-color: #f4f9fc;*/
+    background-color: rgba(255,255,255,.4);
+/*    border-top: 1px solid black;*/
+/*    border-left: 1px solid black;*/
+}
+
+nav .gnb .sub li:hover{
+    text-decoration: underline;
+    background-color: #d4e4ee;
+}
+
+nav .sub{
+    cursor: pointer;
+}
+
+
+
+nav .sub>li{
+    width: 100%;
+    height: 30px;
+    border: 0;
+    font-size: 12px;
+    font-weight: 500;
+/*    border: 1px solid black;*/
+    line-height: 30px;
+}
+
+nav .sub>li:hover{
+    color: dimgray;
+}
+
+
+.slider{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+/*    높이 auto 설정 해줄 땐 꼭 overflow: hidden 써줄 것*/
+}
+
+.slider img{
+    width: 100%;
+    padding-bottom: -1px;
+/*    border: 1px solid black;*/
+}
+
+
+
+section{
+    margin: 0 auto;
+    width: 1200px;
+    height: 600px;
+    padding: 15px;
+}
+
+section .text-box{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    line-height: 60px;
+    
+}
+
+section .text-box h4{
+    color: gray;
+    font-weight: 200;
+    line-height: 10px;
+}
+
+section .frame1,.frame2,.frame3,.frame4{
+/*           border: 1px solid black;*/
+           overflow: hidden;
+           float: left;
+    margin-left: 20px;
+              }
+
+section .box1{
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+section .box2{
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+section .box3{
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+section .box4{
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+
+
+section .box1,.box2,.box3,.box4{
+    float: left;
+/*     border: 1px solid black;*/
+
+}
+
+section .box1 img{
+      transition: 0.7s;
+    
+}
+
+section .box2 img{
+      transition: 0.7s;
+}
+
+section .box3 img{
+      transition: 0.7s;
+}
+
+section .box4 img{
+      transition: 0.7s;
+}
+
+section .box1:hover img{
+    transform: scale(1.2);
+}
+
+section .box2:hover img{
+    transform: scale(1.2);
+}
+
+section .box3:hover img{
+    transform: scale(1.2);
+}
+
+section .box4:hover img{
+    transform: scale(1.2);
+}
+
+
+
+
+section .textbox1,.textbox2,.textbox3,.textbox4{
+    float: left;
+    text-align: center;
+    width: 25%;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 160px;
+}
+
+section h5 {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+section h5:hover{
+    text-decoration: underline;
+}
+
+
+/*전체크기를 지정해주는 건 하나면 충분*/
+contents {
+    width: 100%;
+    height: 700px;
+}
+
+/*height를 지정해주기보다 width값을 꼭 지정해줄 것*/
+video{
+    width: 100%;
+/*    border: 1px solid black;*/
+}
+
+
+.in-wrap{
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    position: relative;
+    
+}
+
+.in-wrap img{
+    width: 100%;
+    vertical-align: middle;
+/*    border: 1px solid black;*/
+}
+
+.in-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 22px;
+    font-size: 13px;
+}
+
+.in-text a{
+    text-decoration: underline;
+}
+
+.in-text a:hover{
+    color:darkturquoise;
+}
+
+
+
+
+.news{
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.news h2{
+    text-align: center;
+    padding-top: 50px;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+
+.news h3{
+     margin: 0 auto;
+}
+
+.news h3 input[type='text']{
+    border: 0;
+    border-bottom: 2px solid #d4e4ee;
+    width: 300px;
+    height: 40px;
+    margin-left: 35%;
+    margin-top: 25px;
+    font-size: 15px;
+    color: slategray;
+    font-weight: 350;
+    padding-left: 20px;
+    
+}
+
+.news button{
+    width:  60px;
+    height: 40px;
+    background-color:#d4e4ee;
+    color: dimgray;
+    font-weight: 500;
+    font-size: 14px;
+    float: right;
+    margin-right: 34.9%;
+    margin-top: -3.3%;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50px;
+}
+
+.news button:hover{
+    opacity: 60%;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 500px;
+    background-color: #f4f9fc;
+/*    border-top: 1px solid black;*/
+    font-size: 13px;
+}
+
+.footer-box{
+    width: 1200px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.footer-box .info{
+    width: 100%;
+    height: 250px;
+    
+}
+
+.info article{
+    width: 23%;
+    height: 500px;
+    float: left;
+    margin-left: 20px;
+    padding-left: 30px;
+    padding-top: 20px;
+    line-height: 38px; 
+}
+
+.info article h2{
+    color: rosybrown;
+}
+
+footer .head{
+    width: 100%;
+    height: 250px;
+    background-color:#d4e4ee;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer .head .headinfo{
+    padding-top: 25px;
+/*    padding-left:10%;*/
+    line-height: 30px;
+    text-align: center;
+}
+
+
+footer .head .headinfo h3{
+    margin-top: 2px;
+    color: dimgray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
