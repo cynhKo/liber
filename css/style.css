@@ -1,3 +1,19 @@
+
+/*                           
+░█████╗░██╗░░░██╗███╗░░██╗██╗░░██╗
+██╔══██╗╚██╗░██╔╝████╗░██║██║░░██║
+██║░░╚═╝░╚████╔╝░██╔██╗██║███████║
+██║░░██╗░░╚██╔╝░░██║╚████║██╔══██║
+╚█████╔╝░░░██║░░░██║░╚███║██║░░██║
+░╚════╝░░░░╚═╝░░░╚═╝░░╚══╝╚═╝░░╚═╝
+
+Designed and developed by. cynh K
+@1.cynh   */
+
+
+
+
+
 /*reset*/
 
 *{
@@ -26,13 +42,9 @@ img{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.4);
-/*    겹치려면 포지션 기억할 것 */
     position: fixed;
-/*    fixed쓰면 값이 없더라도 고정하기 위해 top left 써주기*/
     top: 0;
     left: 0;
-/*    순서를 맞추기 위해 z-index: 사용 (index=들여쓰기)*/
-/*    z-index를 쓴 게 있으면 뒤에 9를 더 붙여서 앞으로 하기*/
     z-index: 99999;
 }
 
@@ -45,20 +57,14 @@ img{
     width: 340px;
     height: 300px;
     background-color: #ffff;
-/*    위치넣기 position: fixed*/
     position: fixed;
     top: 35%;
     left: 50%;
-/*    border-radius: 20%;*/
-
-/*    몸통만큼 너가 계산해서 반만가! 움직이게하는 것 */
-/*    양수 오른쪽 음수 왼쪽*/
     transform: translateX(-50%)
 }
 
 #modal h5{
     font-size: 17px;
-/*    text-align: center;*/
     margin-left: 40px;
     line-height: 40px;
     margin-top: 20px;
@@ -66,7 +72,6 @@ img{
 }
 
 #modal p{
-/*    text-align: center;*/
     margin-left: 40px;
     line-height: 30px;
     font-size: 12px;
@@ -81,13 +86,7 @@ img{
     position: absolute;
     right: 5px;
     bottom: 270px;
-/*
-    float: right;
-    margin-right: 20px;
-    margin-top: 20px;
-*/
     background-color: azure;
-/*    border: 1px solid black;*/
     cursor: pointer;
 
 }
@@ -99,7 +98,6 @@ img{
 #box{
     width: 100%;
     height: 3240px;
-/*    border: 2px solid blue;*/
 }
 
 .container{
@@ -137,10 +135,6 @@ nav{
     margin: 0 auto;
     width: 100%;
     height: 20px;
-/*
-    포지션 앱솔루트 써도 되는데 그러면 화면기준으로 따라가기 때문
-    relative를 써줄 것, 그리고 z-index는 포지션이 있어야 사용가능
-*/
     position: relative;
     z-index: 9999;
   
@@ -166,11 +160,7 @@ nav .gnb li{
     font-weight: bold;
     font-size: 14px;
     line-height: 30px;
-/*    border-radius: 130px;*/
-/*    background-color: #f4f9fc;*/
     background-color: rgba(255,255,255,.4);
-/*    border-top: 1px solid black;*/
-/*    border-left: 1px solid black;*/
 }
 
 nav .gnb .sub li:hover{
@@ -190,7 +180,6 @@ nav .sub>li{
     border: 0;
     font-size: 12px;
     font-weight: 500;
-/*    border: 1px solid black;*/
     line-height: 30px;
 }
 
@@ -204,13 +193,11 @@ nav .sub>li:hover{
     width: 100%;
     height: auto;
     overflow: hidden;
-/*    높이 auto 설정 해줄 땐 꼭 overflow: hidden 써줄 것*/
 }
 
 .slider img{
     width: 100%;
     padding-bottom: -1px;
-/*    border: 1px solid black;*/
 }
 
 
@@ -237,9 +224,8 @@ section .text-box h4{
 }
 
 section .frame1,.frame2,.frame3,.frame4{
-/*           border: 1px solid black;*/
-           overflow: hidden;
-           float: left;
+    overflow: hidden;
+    float: left;
     margin-left: 20px;
               }
 
@@ -267,7 +253,6 @@ section .box4{
 
 section .box1,.box2,.box3,.box4{
     float: left;
-/*     border: 1px solid black;*/
 
 }
 
@@ -326,16 +311,13 @@ section h5:hover{
 }
 
 
-/*전체크기를 지정해주는 건 하나면 충분*/
 contents {
     width: 100%;
     height: 700px;
 }
 
-/*height를 지정해주기보다 width값을 꼭 지정해줄 것*/
 video{
     width: 100%;
-/*    border: 1px solid black;*/
 }
 
 
@@ -350,7 +332,6 @@ video{
 .in-wrap img{
     width: 100%;
     vertical-align: middle;
-/*    border: 1px solid black;*/
 }
 
 .in-text{
@@ -431,7 +412,6 @@ footer{
     width: 100%;
     height: 500px;
     background-color: #f4f9fc;
-/*    border-top: 1px solid black;*/
     font-size: 13px;
 }
 
@@ -471,7 +451,6 @@ footer .head{
 
 footer .head .headinfo{
     padding-top: 25px;
-/*    padding-left:10%;*/
     line-height: 30px;
     text-align: center;
 }
