@@ -28,16 +28,13 @@ $(document).ready(function () {
     });
 
 
+
+
+// 모달창 
+
+$("#modal").show();
+$(".modal_btn").click(function(){
+    $("#modal").fadeOut(350);
 });
 
-
-
-$('#modal').hide();
-
-$('.gnb>li').click(function(){
-    $('#modal').show();
-});
-
-$('.close').click(function(){
-    $('#modal').hide();
 });
